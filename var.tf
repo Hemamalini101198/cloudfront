@@ -1,9 +1,9 @@
+/*
 variable "s3_origin_id" {
   default = "origin id of the s3"
   type = string
-
 }
-
+*/
 variable "origin_id" {
   default = "origin id for cloud front"
   type = string
