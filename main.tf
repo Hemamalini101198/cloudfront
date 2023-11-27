@@ -1,11 +1,11 @@
 resource "aws_cloudfront_distribution" "cf_s3_distribution" {
   origin {
-    domain_name = "test-bucket98548.s3.ap-south-1.amazonaws.com"
-    origin_id   = "test-bucket98548"
+    domain_name = var.domain_name
+    origin_id   = var.origin_id
   }
 enabled             = true
   is_ipv6_enabled     = true
-  comment             = "test-cloud-front"
+  #comment             = "test-cloud-front"
   #aliases = ["${var.admin_domain_name}"]  
 
 default_cache_behavior {
@@ -15,7 +15,7 @@ default_cache_behavior {
 #  origin_request_policy_id     = "Managed-AllViewer"
    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]          
-    target_origin_id = "test-bucket98548"
+    target_origin_id = var.target_origin_id
 forwarded_values {
       query_string = false
 cookies {
