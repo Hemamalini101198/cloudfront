@@ -41,7 +41,6 @@ viewer_protocol_policy = "redirect-to-https"
   restrictions {
     geo_restriction {
       restriction_type = "none"
-      #locations        = ["BY", "CD", "CU", "IR", "IQ", "LY", "NZ", "KP", "SD", "SS", "YE", "ZW", "RU", "SY", "UA"]
     }
   }
 
