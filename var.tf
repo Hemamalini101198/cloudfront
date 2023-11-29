@@ -23,3 +23,8 @@ variable "target_origin_id" {
   description = "domain name for CF"
   type = string
 }
+
+variable "region" {
+  description = "region for CF"
+  type = string
+}
